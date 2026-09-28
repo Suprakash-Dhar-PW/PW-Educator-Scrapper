@@ -11,12 +11,24 @@ const TRACK_SUBJECTS = {
   "NEET": ["Physics", "Chemistry", "Biology"]
 }
 
+// Hardcoded locations for frontend since backend is not publicly deployed yet
+const LOCATIONS = [
+  { value: "Lucknow, Uttar Pradesh", label: "Lucknow" },
+  { value: "Noida, Uttar Pradesh", label: "Noida" },
+  { value: "Greater Noida, Uttar Pradesh", label: "Greater Noida" },
+  { value: "Ghaziabad, Uttar Pradesh", label: "Ghaziabad" },
+  { value: "Kanpur, Uttar Pradesh", label: "Kanpur" },
+  { value: "Prayagraj, Uttar Pradesh", label: "Prayagraj" },
+  { value: "Varanasi, Uttar Pradesh", label: "Varanasi" },
+  { value: "Agra, Uttar Pradesh", label: "Agra" },
+  { value: "Meerut, Uttar Pradesh", label: "Meerut" },
+  { value: "Gorakhpur, Uttar Pradesh", label: "Gorakhpur" }
+];
+
 // Mock API endpoint for development. Ensure backend is running.
 const API_BASE = "http://127.0.0.1:8000/api"
 
 function App() {
-  const [locations, setLocations] = useState([])
-  
   // Filters state
   const [location, setLocation] = useState("")
   const [track, setTrack] = useState("")
@@ -31,14 +43,6 @@ function App() {
 
   // Expanded evidence state
   const [expandedCards, setExpandedCards] = useState(new Set())
-
-  // Fetch locations on mount
-  useEffect(() => {
-    fetch(`${API_BASE}/locations`)
-      .then(res => res.json())
-      .then(data => setLocations(data))
-      .catch(err => console.error("Failed to load locations", err))
-  }, [])
 
   // Handle Track change
   const handleTrackChange = (e) => {
@@ -118,8 +122,8 @@ function App() {
             <label>Location</label>
             <select value={location} onChange={(e) => setLocation(e.target.value)}>
               <option value="">Select a city...</option>
-              {locations.map(loc => (
-                <option key={loc} value={loc}>{loc}</option>
+              {LOCATIONS.map(loc => (
+                <option key={loc.value} value={loc.value}>{loc.label}</option>
               ))}
             </select>
           </div>
