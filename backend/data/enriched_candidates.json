@@ -1,0 +1,50 @@
+[
+    {
+        "candidate_id": "1111-2222-3333-4444",
+        "name": "Alakh Pandey",
+        "platform": "LinkedIn",
+        "profile_url": "https://www.linkedin.com/in/alakh-pandey",
+        "requested_location": "Lucknow, Uttar Pradesh",
+        "requested_track": "IIT-JEE",
+        "requested_subject": "Physics",
+        "discovery": {
+            "source": "anakin_search",
+            "title": "Alakh Pandey - Physics Wallah | LinkedIn",
+            "snippet": "Prominent educator...",
+            "url": "https://www.linkedin.com/in/alakh-pandey"
+        },
+        "profile": {
+            "name": null,
+            "username": null,
+            "bio": null,
+            "followers": null,
+            "following": null,
+            "website": null
+        },
+        "scrape_status": "failed"
+    },
+    {
+        "candidate_id": "5555-6666-7777-8888",
+        "name": "Physics Wallah",
+        "platform": "Instagram",
+        "profile_url": "https://www.instagram.com/physicswallah/",
+        "requested_location": "Lucknow, Uttar Pradesh",
+        "requested_track": "IIT-JEE",
+        "requested_subject": "Physics",
+        "discovery": {
+            "source": "anakin_search",
+            "title": "Physics Wallah Official",
+            "snippet": "Instagram official profile",
+            "url": "https://www.instagram.com/physicswallah/"
+        },
+        "profile": {
+            "name": null,
+            "username": null,
+            "bio": null,
+            "followers": null,
+            "following": null,
+            "website": null
+        },
+        "scrape_status": "failed"
+    }
+]

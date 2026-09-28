@@ -1,0 +1,72 @@
+[
+    {
+        "candidate_id": "1111-2222-3333-4444",
+        "name": "Alakh Pandey",
+        "requested_location": "Lucknow, Uttar Pradesh",
+        "requested_track": "IIT-JEE",
+        "requested_subject": "Physics",
+        "discovery": {
+            "source": "anakin_search",
+            "title": "Alakh Pandey - Physics Wallah | LinkedIn",
+            "snippet": "Prominent educator...",
+            "url": "https://www.linkedin.com/in/alakh-pandey"
+        },
+        "platform_profiles": [
+            {
+                "platform": "LinkedIn",
+                "url": "https://www.linkedin.com/in/alakh-pandey",
+                "scrape_status": "failed",
+                "name": null,
+                "followers": null,
+                "connections": null,
+                "about": null
+            }
+        ]
+    },
+    {
+        "candidate_id": "5555-6666-7777-8888",
+        "name": "Physics Wallah",
+        "requested_location": "Lucknow, Uttar Pradesh",
+        "requested_track": "IIT-JEE",
+        "requested_subject": "Physics",
+        "discovery": {
+            "source": "anakin_search",
+            "title": "Physics Wallah Official",
+            "snippet": "Instagram official profile",
+            "url": "https://www.instagram.com/physicswallah/"
+        },
+        "platform_profiles": [
+            {
+                "platform": "Instagram",
+                "url": "https://www.instagram.com/physicswallah/",
+                "scrape_status": "failed",
+                "username": null,
+                "followers": null,
+                "bio": null
+            }
+        ]
+    },
+    {
+        "candidate_id": "9999-0000-aaaa-bbbb",
+        "name": "Rajwant Singh",
+        "requested_location": "Lucknow, Uttar Pradesh",
+        "requested_track": "IIT-JEE",
+        "requested_subject": "Physics",
+        "discovery": {
+            "source": "anakin_search",
+            "title": "Rajwant Singh Physics",
+            "snippet": "YouTube official profile",
+            "url": "https://www.youtube.com/rajwant-physics"
+        },
+        "platform_profiles": [
+            {
+                "platform": "YouTube",
+                "url": "https://www.youtube.com/rajwant-physics",
+                "scrape_status": "failed",
+                "channel_name": null,
+                "subscribers": null,
+                "description": null
+            }
+        ]
+    }
+]

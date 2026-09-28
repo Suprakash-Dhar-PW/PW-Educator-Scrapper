@@ -1,0 +1,47 @@
+{
+    "location_verification": {
+        "value": "Lucknow",
+        "confidence": 0.4,
+        "status": "uncertain",
+        "evidence": [
+            {
+                "platform": "LinkedIn",
+                "text": "...ixit | Professor of Physics | Location: Lucknow, Uttar Pradesh"
+            }
+        ]
+    },
+    "track_verification": {
+        "value": "IIT-JEE",
+        "confidence": 1.0,
+        "status": "verified",
+        "evidence": [
+            {
+                "platform": "Instagram",
+                "text": "IIT-JEE Physics Faculty at XYZ Coaching."
+            },
+            {
+                "platform": "YouTube",
+                "text": "...ome to my channel. We cover Physics for JEE and NEET."
+            }
+        ]
+    },
+    "subject_verification": {
+        "value": "Physics",
+        "confidence": 1.0,
+        "status": "verified",
+        "evidence": [
+            {
+                "platform": "Instagram",
+                "text": "IIT-JEE Physics Faculty at XYZ Coaching."
+            },
+            {
+                "platform": "YouTube",
+                "text": "Welcome to my channel. We cover Physics for JEE and NEET."
+            },
+            {
+                "platform": "LinkedIn",
+                "text": "...out teaching. Amit Dixit | Professor of Physics | Location: Lucknow, Uttar Pradesh"
+            }
+        ]
+    }
+}

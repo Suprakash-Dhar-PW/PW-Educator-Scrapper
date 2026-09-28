@@ -1,0 +1,2494 @@
+{
+    "lucknow|iit-jee|physics": {
+        "timestamp": "2026-09-27T22:36:37.476041+00:00",
+        "results": [
+            {
+                "educator_id": "02e398fd-2c69-4960-abc2-0e53b7a37b00",
+                "name": "Dheeraj Kumar Dixit",
+                "location": "Lucknow",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/dheeraj-kumar-dixit-22b566265",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 40.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "LinkedIn",
+                        "text": "...NEET. Takshila Institute University of Lucknow. Delhi, India. 1K followers 500+ connec..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "LinkedIn",
+                        "text": "Dheeraj Kumar Dixit - Physics Faculty IITJEE NEET Dheeraj Kumar Dixit. Physics Facul..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "LinkedIn",
+                        "text": "Dheeraj Kumar Dixit - Physics Faculty IITJEE NEET Dheeraj Kumar Dixit..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "bf44bd33-f46d-4d88-abc7-2056f20769bf",
+                "name": "Educators",
+                "location": "Unknown",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://www.iitschool.in/pages/educators",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "description": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 34.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "track",
+                        "platform": "Other",
+                        "text": "...Teaching Experience 14+ years Mentor of IIT-JEE Advanced Top Rankers * AIR 20 (2022): N..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Other",
+                        "text": "...r) - Inorganic Chemistry > Sanjay Sir - Physics Teaching Experience 14+ years Mentor of..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "ca8cb3cf-e7ce-44ca-841a-a22321227233",
+                "name": "Amit Maurya",
+                "location": "Lucknow",
+                "track": "Unknown",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/amit-maurya-66251b88",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 27.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "LinkedIn",
+                        "text": "...itute of Technology, Bombay \u00b7 Location: Lucknow \u00b7 500+ connections on LinkedIn."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "LinkedIn",
+                        "text": "Amit Maurya - Professor of Physics Professor of Physics \u00b7 Experience: Self..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "a9451501-a3b5-4c63-9fc6-bdfb4a479d7a",
+                "name": "Siddharth Singh",
+                "location": "Lucknow",
+                "track": "Unknown",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/siddharth-singh-982756199",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 27.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "LinkedIn",
+                        "text": "Siddharth Singh - Physics Faculty, Lucknow An experienced and passionate physics e..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "LinkedIn",
+                        "text": "Siddharth Singh - Physics Faculty, Lucknow An experienced and pas..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "faf04c2f-658c-4fc3-b972-3535809d06b2",
+                "name": "Sandeep Mukala (@sandeepmukala) \u2022 Instagram photos and videos",
+                "location": "Unknown",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Instagram",
+                        "url": "https://www.instagram.com/sandeepmukala",
+                        "scrape_status": "failed",
+                        "username": null,
+                        "followers": null,
+                        "bio": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 40.0,
+                        "subject_relevance": 40.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 24.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "track",
+                        "platform": "Instagram",
+                        "text": "...la) on Instagram: \"Physics lecturer for IITJEE\""
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Instagram",
+                        "text": "...Mukala (@sandeepmukala) on Instagram: \"Physics lecturer for IITJEE\""
+                    }
+                ]
+            }
+        ]
+    },
+    "lucknow, uttar pradesh|iit-jee|physics": {
+        "timestamp": "2026-09-27T23:01:58.133232+00:00",
+        "results": [
+            {
+                "educator_id": "dc515d6a-1467-4966-945c-ebe8483dbadc",
+                "name": "Siddharth Singh",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/siddharth-singh-982756199",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 6.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "7c89d3ac-2a48-422d-8fd7-552167defe71",
+                "name": "Dheeraj Kumar Dixit",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/dheeraj-kumar-dixit-22b566265",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 6.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "c268d4d8-f307-4ec5-8c29-36475fd52682",
+                "name": "Amit Maurya",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/amit-maurya-66251b88",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 6.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "0a6123d7-6b18-47d6-bd75-90562318d888",
+                "name": "PRABHAT SHUKLA",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/prabhat-shukla-74528a100",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 6.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "ff48314c-e14c-4dbc-b86b-0a419aeaf439",
+                "name": "Er. Ajit Sharma",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/er-ajit-sharma-1885ab4b",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 6.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "04270bf3-04e1-4e55-9db2-8ab249152a3c",
+                "name": "Vinay Physics",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://www.vinayphysics.com/",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "228c053f-6951-463e-9775-14a2328e9550",
+                "name": "Home",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://competishun.com/",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "a3298302-6359-40f2-b5b3-72e2f275baff",
+                "name": "Educators",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://www.iitschool.in/pages/educators",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "5de4aef0-f85b-49ce-9ee9-be9df3f03891",
+                "name": "PW VIDYAPEETH NEET  / IIT JEE Coaching Sikar",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://academycheck.com/coaching/physics-wallah-lucknow-vrindavan-vidyapeeth",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "c64f67ba-82b7-4978-946f-73bbd5ad7041",
+                "name": "Anshu Shukla (@anshu_sjwj) \u2022 Instagram photos and videos",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Instagram",
+                        "url": "https://www.instagram.com/anshu_sjwj",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "a8617273-53ba-4871-8e01-2d0f729f0f7b",
+                "name": "Sandeep Mukala (@sandeepmukala) \u2022 Instagram photos and videos",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Instagram",
+                        "url": "https://www.instagram.com/sandeepmukala",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "5e7f5e94-31f2-4f4d-a228-8885bfd2e5f0",
+                "name": "Satyam Bhandari (@satyambhandari16)",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Instagram",
+                        "url": "https://www.instagram.com/satyambhandari16?hl=en",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "5e993d83-eb01-4642-98e2-61b93332213a",
+                "name": "Er. Vinay Kumar (@physics.vinay) \u00b7 Lucknow",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Instagram",
+                        "url": "https://www.instagram.com/physics.vinay",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "1323f33e-6a11-4acb-bb4e-a5d9b7300c29",
+                "name": "Sajit Chandra Shakya (@sajitcshakya)",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Instagram",
+                        "url": "https://www.instagram.com/sajitcshakya",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "9221fdbc-28c9-430e-b26a-59a294c4c683",
+                "name": "Physics Wallah",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "YouTube",
+                        "url": "https://www.youtube.com/@physicswallah",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "c3af6c77-8374-49d8-aea9-dcce516573ec",
+                "name": "Abhishek Sahu",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "YouTube",
+                        "url": "https://www.youtube.com/channel/UCShZdCcb5Gu5IFxyGpY1u6A",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "a173cfaf-860e-4d4b-96e6-0e58e1587353",
+                "name": "Physics for IITJEE by Rohit Mishra \u2013 Telegram",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://t.me/s/profrohitphysics?before=174",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "8bd3705d-8abd-46a4-b4f0-268e6133646b",
+                "name": "Physics by Nipun Mittal",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "YouTube",
+                        "url": "https://www.youtube.com/channel/UCN2finb3ZJovv13W6mxTtqA",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "c3eea2a6-1ac6-4ac7-a5f1-ca5e52ed0fa0",
+                "name": "IIT JEE Lectures",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "YouTube",
+                        "url": "https://www.youtube.com/channel/UCooO6qgMRkDVapz4Tql3OHw",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "416d05d9-6f3c-48ba-9a8d-949e1ba3163a",
+                "name": "u/Vinay-Uppal-Physics",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Reddit",
+                        "url": "https://www.reddit.com/user/Vinay-Uppal-Physics",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "6363a3bf-45f7-407c-9554-be8e37df4137",
+                "name": "Sandeep Asthana (@SandeepAsthan) / Posts / X",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://x.com/SandeepAsthan?lang=en",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "3217e11c-aab3-4c5b-9a90-5d3ae2e737a5",
+                "name": "Rahul Yadav (@ryphysicsjee)",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Instagram",
+                        "url": "https://www.instagram.com/ryphysicsjee",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "8ccababd-7c39-401d-8fca-ba475b1c0ea7",
+                "name": "Sumant Patel",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://www.urbanpro.com/lucknow/sumant-patel/16638912",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            },
+            {
+                "educator_id": "699f2b2c-9132-4a49-a9d3-310cc1d42919",
+                "name": "I'm Vinay Uppal, I teach Physics for JEE and Olympiads ...",
+                "location": "Unknown",
+                "track": "Unknown",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "Reddit",
+                        "url": "https://www.reddit.com/r/JEE/comments/1sabg6r/im_vinay_uppal_i_teach_physics_for_jee_and",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 0
+                    },
+                    "overall": 4.6,
+                    "reasons": []
+                },
+                "evidence": []
+            }
+        ]
+    },
+    "delhi|iit-jee|physics": {
+        "timestamp": "2026-09-27T23:03:40.862311+00:00",
+        "results": [
+            {
+                "educator_id": "cb77dc89-c535-4294-8417-edf3ff9621b2",
+                "name": "Ajoy Ghatak",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/ajoy-ghatak-12097950",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 40.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "LinkedIn",
+                        "text": "...- (Retired) Professor of Physics at IIT Delhi (Retired) Professor of Physics at IIT D..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "LinkedIn",
+                        "text": "...tak - (Retired) Professor of Physics at IIT Delhi (Retired) Professor of Physics at..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "LinkedIn",
+                        "text": "Ajoy Ghatak - (Retired) Professor of Physics at IIT Delhi (Retired) Professor of Phy..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "8f069307-a2b3-46cf-ad47-38389385c37d",
+                "name": "Rishabh Goswami",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/rishabh-goswami-ab2b361b4",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 40.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "LinkedIn",
+                        "text": "Rishabh Goswami - |Masters. IIT Delhi(2025-dropout 2026) I'm a Physics Educat..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "LinkedIn",
+                        "text": "Rishabh Goswami - |Masters. IIT Delhi(2025-dropout 2026) I'm a Physics..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "LinkedIn",
+                        "text": "...ers. IIT Delhi(2025-dropout 2026) I'm a Physics Educator with a passion for helping stu..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "53169c44-3d29-4613-9861-f1dddcb80b65",
+                "name": "Ritesh Dahiya",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/riteshdahiya",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 40.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "LinkedIn",
+                        "text": "Ritesh Dahiya - IIT Delhi | Senior Physics Faculty for ... Ritesh..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "LinkedIn",
+                        "text": "...IIT Delhi | Senior Physics Faculty for IIT-JEE / NEET, Entrepreneur, Indian Institute..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "LinkedIn",
+                        "text": "Ritesh Dahiya - IIT Delhi | Senior Physics Faculty for ... Ritesh Dahiya IIT Delhi..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "9e37af47-6141-4e4d-8e1d-a8fe499b4d86",
+                "name": "Syed Mohsin Abass Razvi",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/syed-mohsin-abass-razvi-b3b805195",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 40.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "LinkedIn",
+                        "text": "...der & CEO at Structure Audit Agency New Delhi Connect * Nitish Gupta Nitish Gupta"
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "LinkedIn",
+                        "text": "...Puducherry, India Physics Lecture NEET/IIT-JEE * Physics Lecturer NEET-IIT-JEE Locus I..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "LinkedIn",
+                        "text": "Sr Physics Lecturer NEET-IITJEE Allen Ex-NIEDO Sup..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "48527721-47d9-41e2-b067-e96f483d920d",
+                "name": "askIITians Experts",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://www.askiitians.com/academic-experts-profile.aspx",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 38.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "Other",
+                        "text": "...ience: 10+ Banga Madam Kajal Banga (IIT Delhi) Chemistry Rating: 4.82 (6220 ratings)..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "Other",
+                        "text": "...5+ Mazumdar Sir Mr Mazumdar (IIT Delhi) IIT JEE Wizard Rating: 4.82 (1923 ratings) Year..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Other",
+                        "text": "...n Tripathi Eshan Tripathi (IIT Roorkee) Physics Rating: 4.83 (4597 ratings) Years of Ex..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "9e52ce46-573f-4176-abd6-cdb2ecadfa51",
+                "name": "Online Classes for IIT JEE/NEET",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://admissions.pracbee.com/jee-neet",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 38.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "Other",
+                        "text": "...bee Achiever -  Jaspreet Randhawa - IIT Delhi (Computer Science) IIT Delhi (Computer..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "Other",
+                        "text": "...Pracbee Achiever -  Jaspreet Randhawa - IIT Delhi (Computer Science) IIT Delhi (Com..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Other",
+                        "text": "...Linkedin 17+ years of experience. NEET Physics Author. Best JEE Faculty: Gaurav Prakas..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "82efe749-a27a-41e0-b0cb-aa05ed31d111",
+                "name": "Department of Physics:: IIT Delhi",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://physics.iitd.ac.in/faculty",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 38.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "Other",
+                        "text": "...ysics at Indian Institute of Technology Delhi , New Delhi, since April 2011. He recei..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "Other",
+                        "text": "...partment 011 2659 1331 hodphysics@admin.iitd.ac.in Sujeet Chaudhary is a Professor..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Other",
+                        "text": "Head of Department 011 2659 1331 hodphysics@admin.iitd.ac.in Sujeet Chaudhary is a..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "5cf999d6-0615-4737-b283-f7bc01531726",
+                "name": "Department of Physics:: IIT Delhi",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://physics.iitd.ac.in/guest_faculty",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 38.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "Other",
+                        "text": "...Physics, Indian Institute of Technology Delhi, Hauz khas, New Delhi, 110 016, India P..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "Other",
+                        "text": "...-11-2659 1331) Email hodphysics@physics.iitd.ac.in * Address: MS-415, 3rd floor, De..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Other",
+                        "text": "...ddress MS-415, 3rd floor, Department of Physics, Indian Institute of Technology Delhi,..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "b7b9c955-a13d-4a9d-933c-c56df2212b90",
+                "name": "Rahul Pancholi (@pancholirahul09) / X",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://x.com/pancholirahul09",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 38.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "Other",
+                        "text": "...IT JEE Physics Educator || AIR 3599 New Delhi Joined August 2023 129 Following 3 Foll..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "Other",
+                        "text": "Rahul Pancholi (@pancholirahul09) / X IIT JEE Physics Educator || AIR 3599. IIT JEE P..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Other",
+                        "text": "...Pancholi (@pancholirahul09) / X IIT JEE Physics Educator || AIR 3599. IIT JEE Physics E..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "f9f4b5b2-41ad-4268-9eaa-799bfc191416",
+                "name": "Nishant Jindal [IIT Delhi]",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "YouTube",
+                        "url": "https://www.youtube.com/@realnishantjindal/videos",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 38.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "YouTube",
+                        "text": "Nishant Jindal [IIT Delhi] - YouTube 17:19. Advanced Question Fro..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "YouTube",
+                        "text": "Nishant Jindal [IIT Delhi] - YouTube 17:19. Advanced Questi..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "YouTube",
+                        "text": "...ndal #jee2028 ... *REAL* Advanced Level Physics | Ninja sir | Nishant Jindal #jee2027 #..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "a7582d4a-33d2-4631-b727-7fbd34e4d346",
+                "name": "IIT JEE physics lectures by SSI sir B. Tech. IIT Delhi ...",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "YouTube",
+                        "url": "https://www.youtube.com/playlist?list=PLx2L6yjUEa7tcKjC7DW4cv2A0JpNQGZkj",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 38.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "YouTube",
+                        "text": "...hysics lectures by SSI sir B. Tech. IIT Delhi ... IIT JEE physics lectures by SSI sir..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "YouTube",
+                        "text": "IIT JEE physics lectures by SSI sir B. Tech. II..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "YouTube",
+                        "text": "IIT JEE physics lectures by SSI sir B. Tech. IIT Delhi..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "c59e5c03-830d-44fb-af79-6b1924db9364",
+                "name": "Rahul Yadav (@ryphysicsjee)",
+                "location": "Unknown",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Instagram",
+                        "url": "https://www.instagram.com/ryphysicsjee?hl=en",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 34.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "track",
+                        "platform": "Instagram",
+                        "text": "...for JEE Aspirant Mechanical Engineering@IIT Roorkee Cricketer, Racer @little_explor..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Instagram",
+                        "text": "Rahul Yadav (@ryphysicsjee) Physics Educator @physicswallah. Me..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "569835c3-505b-4516-83ec-2ca22c58b18d",
+                "name": "Rittik Baheti (@rittik_baheti)",
+                "location": "Unknown",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://topmate.io/rittik_baheti",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 34.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "track",
+                        "platform": "Other",
+                        "text": "...eo meeting . 20 mins 1:1 Mentorship for IIT JEE Let\u2019s talk about your IIT JEE preparati..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Other",
+                        "text": "...ving worked with leading platforms like Physics Wallah and Unacademy. 500,000+ follower..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "8d9a4ae4-6539-4adb-89e7-571b6f4f5582",
+                "name": "Physics Teacher Sanjiv Ranjan Sir: #1 Best Physics Teacher ...",
+                "location": "Unknown",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://physicsteachersanjiv.com/",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 34.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "track",
+                        "platform": "Other",
+                        "text": "...ia's most trusted Physics educators for IIT JEE, NEET, and board exams, known for simpl..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Other",
+                        "text": "Physics Teacher Sanjiv Ranjan Sir: #1 Best Phys..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "3b3773da-ecbd-40e1-9bef-ecade00e402c",
+                "name": "Ex-Faculty Members",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Other",
+                        "url": "https://physics.iitd.ac.in/ex_faculty",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 40.0,
+                        "subject_relevance": 40.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 28.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "Other",
+                        "text": "...Physics, Indian Institute of Technology Delhi, Hauz khas, New Delhi, 110 016, India P..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "Other",
+                        "text": "...-11-2659 1331) Email hodphysics@physics.iitd.ac.in * Address: MS-415, 3rd floor, De..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Other",
+                        "text": "...ddress MS-415, 3rd floor, Department of Physics, Indian Institute of Technology Delhi,..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "0211393f-00e4-4895-ba36-807eb6467a1b",
+                "name": "Manish raj (@mrsir_mrstar) \u2022 Instagram photos and videos",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Instagram",
+                        "url": "https://www.instagram.com/mrsir_mrstar?hl=en",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 40.0,
+                        "subject_relevance": 40.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 28.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "Instagram",
+                        "text": "...love \u2764\ufe0f *PhD in physics, University of Delhi\u201d free coaching preparation for JEE, NEE..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "Instagram",
+                        "text": "...hing is love \u2764\ufe0f 20 students get 100% in jee main physics by my notes and their hard..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Instagram",
+                        "text": "...ish raj 510K followers 1,526 following *Physics teaching is love \u2764\ufe0f 20 students get 100..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "03d62b0f-d777-4ae7-9f80-7a4320a91a98",
+                "name": "Vedantu JEE",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "YouTube",
+                        "url": "https://www.youtube.com/@JEEVedantu",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 40.0,
+                        "subject_relevance": 40.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 28.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "YouTube",
+                        "text": "...hether you're targeting IIT Bombay, IIT Delhi, or IIT Kharagpur, this last-month prep..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "YouTube",
+                        "text": "...Advanced 2025. Whether you're targeting IIT Bombay, IIT Delhi, or IIT Kharagpur, th..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "YouTube",
+                        "text": ".... . \ud83d\udd34 JEE 2027 | How to Start Class 11 Physics from ZERO | BRIDGE COURSE For Class 11t..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "3e79d635-ad39-44aa-8365-6e76f4ad4e1f",
+                "name": "Rahul Poonia",
+                "location": "Delhi",
+                "track": "IIT-JEE",
+                "subjects": [],
+                "profiles": [
+                    {
+                        "platform": "LinkedIn",
+                        "url": "https://linkedin.com/in/rahul-poonia-504120154",
+                        "scrape_status": "failed",
+                        "name": null,
+                        "followers": null,
+                        "connections": null,
+                        "about": null
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 65.0,
+                        "subject_relevance": 0.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 40,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 27.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "LinkedIn",
+                        "text": "...E faculty JEE faculty \u00b7 Experience: IIT Delhi \u00b7 Education: Indian Institute of Techno..."
+                    },
+                    {
+                        "dimension": "track",
+                        "platform": "LinkedIn",
+                        "text": "...- JEE faculty JEE faculty \u00b7 Experience: IIT Delhi \u00b7 Education: Indian Institute of..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "71806bc7-fc46-43a9-b42c-cf2a60e0665a",
+                "name": "Ayushi khandelwal (@iayushikhandelwal)",
+                "location": "Delhi",
+                "track": "Unknown",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Instagram",
+                        "url": "https://www.instagram.com/iayushikhandelwal?hl=en",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 0.0,
+                        "subject_relevance": 65.0,
+                        "location_relevance": 40.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 25.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "location",
+                        "platform": "Instagram",
+                        "text": "...wallah NET-JRF (AIR-106) GATE QUALIFIED DELHI UNIVERSITY'22\u201d  >  Ayushi khandelwal (@..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Instagram",
+                        "text": "...posts \u00b7 @iayushikhandelwal: \u201ceducator @physicswallah NET-JRF (AIR-106) GATE QUALIFIED..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "76ba43d1-5f56-4ac4-a8e3-86f2278a1161",
+                "name": "Sandeep Mukala (@sandeepmukala) \u2022 Instagram photos and videos",
+                "location": "Unknown",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Instagram",
+                        "url": "https://www.instagram.com/sandeepmukala",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 40.0,
+                        "subject_relevance": 40.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 24.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "track",
+                        "platform": "Instagram",
+                        "text": "...la) on Instagram: \"Physics lecturer for IITJEE\""
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Instagram",
+                        "text": "...Mukala (@sandeepmukala) on Instagram: \"Physics lecturer for IITJEE\""
+                    }
+                ]
+            },
+            {
+                "educator_id": "9812c4ab-a5a8-424e-8d26-611e2d8f8e64",
+                "name": "Physics For IIT JEE by Rohit Mishra",
+                "location": "Unknown",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "YouTube",
+                        "url": "https://www.youtube.com/channel/UCnYBPTaEnE-0uHnNUGqnMlg",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 40.0,
+                        "subject_relevance": 40.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 24.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "track",
+                        "platform": "YouTube",
+                        "text": "...For IIT JEE by Rohit Mishra @PhysicsForIITJEEbyRohitMishra \u2022 19K subscribers \u2022 1K vid..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "YouTube",
+                        "text": "...ube Music YouTube Kids Report history # Physics For IIT JEE by Rohit Mishra @PhysicsFor..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "9650a55f-9d9d-4984-82d7-992b27988a54",
+                "name": "Abhishek Sahu",
+                "location": "Unknown",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "YouTube",
+                        "url": "https://www.youtube.com/channel/UCShZdCcb5Gu5IFxyGpY1u6A",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 40.0,
+                        "subject_relevance": 40.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 24.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "track",
+                        "platform": "YouTube",
+                        "text": "...ge & Field One Shot \u274c Gunshot \u2714\ufe0f | CBSE JEE NEET |2025-26 33K views 5 days ago 7:04..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "YouTube",
+                        "text": "...channel I'll be helping you in learning Physics with ease. ...more ...more Subscribe Jo..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "c9118667-7f7e-4dc5-9ba0-51074ff0c7fd",
+                "name": "I'm Vinay Uppal, I teach Physics for JEE and Olympiads ...",
+                "location": "Unknown",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Reddit",
+                        "url": "https://www.reddit.com/r/JEE/comments/1sabg6r/im_vinay_uppal_i_teach_physics_for_jee_and",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 40.0,
+                        "subject_relevance": 40.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 24.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "track",
+                        "platform": "Reddit",
+                        "text": "I'm Vinay Uppal, I teach Physics for JEE and Olympiads ... Hi all, I'm Vinay Upp..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Reddit",
+                        "text": "I'm Vinay Uppal, I teach Physics for JEE and Olympiads ... Hi all, I'm V..."
+                    }
+                ]
+            },
+            {
+                "educator_id": "13beebdc-2d1c-4544-bdc2-f7b0fec753ed",
+                "name": "Opinion on Sandeep Mishra sir? : r/JEE",
+                "location": "Unknown",
+                "track": "IIT-JEE",
+                "subjects": [
+                    "Physics"
+                ],
+                "profiles": [
+                    {
+                        "platform": "Reddit",
+                        "url": "https://www.reddit.com/r/JEE/comments/1l8ismo/opinion_on_sandeep_mishra_sir",
+                        "scrape_status": "success",
+                        "name": null,
+                        "username": null,
+                        "bio": null,
+                        "followers": null,
+                        "following": null,
+                        "website": null,
+                        "location": null,
+                        "headline": null,
+                        "description": null,
+                        "social_profiles": []
+                    }
+                ],
+                "scores": {
+                    "components": {
+                        "track_relevance": 40.0,
+                        "subject_relevance": 40.0,
+                        "location_relevance": 0.0,
+                        "teaching_evidence": 0,
+                        "professional_evidence": 0,
+                        "cross_platform_presence": 33.4,
+                        "audience_signal": 0,
+                        "profile_completeness": 25.0,
+                        "evidence_quality": 40
+                    },
+                    "overall": 24.6,
+                    "reasons": []
+                },
+                "evidence": [
+                    {
+                        "dimension": "track",
+                        "platform": "Reddit",
+                        "text": "Opinion on Sandeep Mishra sir? : r/JEE Well I'm in nsep 2025 and I bought his..."
+                    },
+                    {
+                        "dimension": "subject",
+                        "platform": "Reddit",
+                        "text": "...bhi abhi khareeda hai aur just intro to physics khatam hua hai."
+                    }
+                ]
+            }
+        ]
+    }
+}

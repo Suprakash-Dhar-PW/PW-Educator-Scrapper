@@ -1,0 +1,83 @@
+[
+    {
+        "candidate_id": "8280f997-4abe-475e-8825-465a0872e5cd",
+        "name": "Alakh Pandey",
+        "username": null,
+        "platform": "LinkedIn",
+        "profile_url": "https://www.linkedin.com/in/alakh-pandey",
+        "location": null,
+        "track": "IIT-JEE",
+        "subject": "Physics",
+        "bio": null,
+        "description": null,
+        "followers": null,
+        "following": null,
+        "website": null,
+        "discovery_source": "anakin_search",
+        "discovery_query": "Find IIT-JEE Physics educators and teachers in Lucknow.",
+        "discovery_snippet": "Alakh Pandey is a prominent Physics educator...",
+        "verified": false,
+        "verification_status": "unverified",
+        "raw_data": {
+            "title": "Alakh Pandey - Physics Wallah | LinkedIn",
+            "url": "https://www.linkedin.com/in/alakh-pandey",
+            "snippet": "Alakh Pandey is a prominent Physics educator...",
+            "date": "2023-10-01",
+            "last_updated": "2023-10-15"
+        }
+    },
+    {
+        "candidate_id": "2b9c7adc-93e0-4513-80ab-b4d7134ef356",
+        "name": "Rajwant Singh",
+        "username": null,
+        "platform": "YouTube",
+        "profile_url": "https://www.youtube.com/rajwant-physics",
+        "location": null,
+        "track": "IIT-JEE",
+        "subject": "Physics",
+        "bio": null,
+        "description": null,
+        "followers": null,
+        "following": null,
+        "website": null,
+        "discovery_source": "anakin_search",
+        "discovery_query": "Find IIT-JEE Physics educators and teachers in Lucknow.",
+        "discovery_snippet": "Top IIT-JEE Physics educator...",
+        "verified": false,
+        "verification_status": "unverified",
+        "raw_data": {
+            "title": "Rajwant Singh - Physics | YouTube",
+            "url": "https://www.youtube.com/rajwant-physics",
+            "snippet": "Top IIT-JEE Physics educator...",
+            "date": "2023-10-05",
+            "last_updated": "2023-10-16"
+        }
+    },
+    {
+        "candidate_id": "731cda76-f68c-4169-8bc5-e7f4e6aa0003",
+        "name": "Educators",
+        "username": null,
+        "platform": "Other",
+        "profile_url": "https://www.iitschool.in/pages/educators",
+        "location": null,
+        "track": "IIT-JEE",
+        "subject": "Physics",
+        "bio": null,
+        "description": null,
+        "followers": null,
+        "following": null,
+        "website": null,
+        "discovery_source": "anakin_search",
+        "discovery_query": "Find IIT-JEE Physics educators and teachers in Lucknow.",
+        "discovery_snippet": "Learn from India's Most Trusted IIT Educators",
+        "verified": false,
+        "verification_status": "unverified",
+        "raw_data": {
+            "title": "Educators - IIT School",
+            "url": "https://www.iitschool.in/pages/educators",
+            "snippet": "Learn from India's Most Trusted IIT Educators",
+            "date": "",
+            "last_updated": ""
+        }
+    }
+]

@@ -1,0 +1,26 @@
+{
+    "educator": {
+        "educator_id": "mock-ed-1",
+        "name": "Amit Dixit"
+    },
+    "ranking": {
+        "scores": {
+            "track_relevance": 100,
+            "subject_relevance": 100,
+            "location_relevance": 40.0,
+            "teaching_evidence": 100,
+            "professional_evidence": 70,
+            "cross_platform_presence": 66.8,
+            "audience_signal": 100,
+            "profile_completeness": 100,
+            "evidence_quality": 70
+        },
+        "overall_relevance_score": 86.2,
+        "reasons": [
+            "Highly verified IIT-JEE Physics educator.",
+            "Strong evidence of teaching experience found in profile bios.",
+            "Established presence across 2 different platforms.",
+            "Strong audience signal with 15500+ followers."
+        ]
+    }
+}
