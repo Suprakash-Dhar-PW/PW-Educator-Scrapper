@@ -133,15 +133,13 @@ class ValidatorService:
         if len(platforms_found) >= 2 and confidence_score < 1.0:
             confidence_score = min(1.0, confidence_score + 0.2)
 
-        # Determine status
+        # Determine status based on confidence
         if confidence_score >= 0.8:
             status = "verified"
-        elif confidence_score >= 0.5:
-            status = "likely"
-        elif confidence_score > 0.0:
-            status = "uncertain"
+        elif confidence_score >= 0.4:
+            status = "partially_verified"
         else:
-            status = "not_relevant"
+            status = "discovered"
             
         # Do not invent location: if not found, we don't return one
         return {

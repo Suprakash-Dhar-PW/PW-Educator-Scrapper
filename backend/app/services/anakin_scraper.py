@@ -57,19 +57,8 @@ class AnakinScraperService:
         platform = self.detect_platform(url)
         
         if not self.api_key:
-            # Inject mock data for demonstration
-            mock = self._create_fallback_response(url, platform, status="mock")
-            mock["bio"] = f"Top {platform} educator in Lucknow, Uttar Pradesh. I teach Physics for IIT-JEE."
-            mock["location"] = "Lucknow, Uttar Pradesh"
-            mock["followers"] = 50000
-            
-            # Simulate a cross-platform link
-            if platform == "Instagram":
-                mock["social_profiles"] = [{"platform": "YouTube", "url": "https://www.youtube.com/user123"}]
-            elif platform == "YouTube":
-                mock["social_profiles"] = [{"platform": "Instagram", "url": "https://www.instagram.com/user123"}]
-            
-            return mock
+            # Return empty fallback since API is not available
+            return self._create_fallback_response(url, platform, status="failed")
 
         submit_endpoint = "https://api.anakin.io/v1/url-scraper"
         payload = {
@@ -98,7 +87,17 @@ class AnakinScraperService:
             response = requests.post(submit_endpoint, headers=self.get_headers(), json=payload, timeout=10)
             response.raise_for_status()
             job_data = response.json()
+            import logging
+            logging.getLogger("anakin_scraper").info(f"[SCRAPE INITIATED] URL: {url} | Job ID: {job_data.get('id') or job_data.get('job_id')}")
+        except requests.exceptions.HTTPError as e:
+            status_code = e.response.status_code if e.response else "Unknown"
+            error_msg = e.response.text if e.response else str(e)
+            import logging
+            logging.getLogger("anakin_scraper").error(f"[SCRAPE HTTP ERROR] Provider: Anakin API | Status: {status_code} | URL: {url} | Response: {error_msg}")
+            return self._create_fallback_response(url, platform, status="failed")
         except requests.exceptions.RequestException as e:
+            import logging
+            logging.getLogger("anakin_scraper").error(f"[SCRAPE REQUEST ERROR] Provider: Anakin API | URL: {url} | Error: {str(e)}")
             return self._create_fallback_response(url, platform, status="failed")
             
         job_id = job_data.get("id") or job_data.get("job_id") or job_data.get("jobId")

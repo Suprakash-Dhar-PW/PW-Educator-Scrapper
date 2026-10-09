@@ -27,14 +27,24 @@ VALID_TRACKS = {
     "NEET": ["Physics", "Chemistry", "Biology"]
 }
 
-MOCK_LOCATIONS = [
-    "Lucknow", "Delhi", "Kota", "Pune", "Patna", 
-    "Mumbai", "Bangalore", "Hyderabad", "Online"
+SUPPORTED_LOCATIONS = [
+    # Karnataka
+    "Bengaluru", "Mysuru", "Mangaluru", "Hubballi", "Belagavi",
+    # Tamil Nadu
+    "Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem",
+    # Telangana
+    "Hyderabad", "Warangal", "Karimnagar",
+    # Andhra Pradesh
+    "Vijayawada", "Visakhapatnam", "Guntur", "Tirupati", "Nellore",
+    # Kerala
+    "Kochi", "Thiruvananthapuram", "Kozhikode", "Thrissur", "Kollam",
+    # Existing
+    "Lucknow", "Delhi", "Kota", "Pune", "Patna", "Mumbai", "Online"
 ]
 
 @router.get("/locations", response_model=List[str])
 async def get_locations():
-    return MOCK_LOCATIONS
+    return sorted(SUPPORTED_LOCATIONS)
 
 @router.get("/tracks", response_model=List[str])
 async def get_tracks():
@@ -70,82 +80,132 @@ async def search_educators(request: SearchRequest):
                     "subject": request.subject
                 },
                 total_results=len(cached["results"]),
+                target_reached=cached.get("target_reached", False),
                 last_updated=cached["timestamp"],
                 results=cached["results"]
             )
         
-    # 2. Search Anakin
-    try:
-        raw_results = search_service.search_educators(request.location, request.track, request.subject)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Search service failed: {str(e)}")
-        
-    # 3. Normalize candidates (Already normalized in search_service)
     import logging
+    import time
     logger = logging.getLogger("discovery")
     logger.info(f"[DISCOVERY] Initiating multi-platform discovery for {request.track} {request.subject} in {request.location}")
-    normalized = raw_results
     
-    # 4. Enrich profiles (Synchronously blocking for now as requested)
-    enriched = enrichment.enrich_candidates(normalized)
+    target_count = 15
+    queries = search_service.get_queries(request.location, request.track, request.subject)
     
-    # 5. Deduplicate educators
-    dedup_results = deduplication.resolve_identities(enriched)
-    educators_list = dedup_results.get("educators", [])
-    social_profiles_list = dedup_results.get("social_profiles", [])
-    
+    all_enriched = []
+    seen_urls = set()
     final_results = []
+    target_reached = False
     
-    # 6 & 7. Verify evidence and calculate ranking
-    for ed in educators_list:
-        ed_profiles = [p for p in social_profiles_list if p["educator_id"] == ed["educator_id"]]
+    start_time = time.time()
+    max_duration_seconds = 45 # Prevent API timeout
+    
+    # Process queries in batches to avoid overwhelming the scraper and hit target efficiently
+    batch_size = 4
+    for i in range(0, len(queries), batch_size):
+        if time.time() - start_time > max_duration_seconds:
+            logger.info("[DISCOVERY] Reached max execution time, stopping discovery loop.")
+            break
+            
+        current_batch_queries = queries[i:i+batch_size]
+        new_raw_results = []
         
-        # Verify
-        verification = validator.verify_educator(
-            educator=ed,
-            social_profiles=ed_profiles,
-            target_location=request.location,
-            target_track=request.track,
-            target_subject=request.subject
-        )
-        
-        # Rank
-        rank_data = ranking.rank_educator(ed, ed_profiles, verification)
-        
-        # Extract evidence array from verification dict
-        evidence = []
-        for dim, res in verification.items():
-            for ev in res.get("evidence", []):
-                evidence.append({
-                    "dimension": dim.replace("_verification", ""),
-                    "platform": ev.get("platform"),
-                    "text": ev.get("text")
-                })
+        for platform, prompt in current_batch_queries:
+            try:
+                results = search_service.execute_query(platform, prompt, request.location, request.track, request.subject)
+                for r in results:
+                    url = r.get("profile_url")
+                    if url and url not in seen_urls:
+                        seen_urls.add(url)
+                        new_raw_results.append(r)
+            except Exception as e:
+                logger.error(f"[DISCOVERY] Query execution failed: {e}")
                 
-        # Format the result
-        result = SearchResult(
-            educator_id=ed["educator_id"],
-            name=ed["name"],
-            location=verification.get("location_verification", {}).get("value") or "Unknown",
-            track=verification.get("track_verification", {}).get("value") or "Unknown",
-            subjects=[verification.get("subject_verification", {}).get("value")] if verification.get("subject_verification", {}).get("value") else [],
-            profiles=[p.get("raw_profile_data", {}).get("platform_profiles", [{}])[0] for p in ed_profiles],
-            scores={
-                "components": rank_data["scores"],
-                "overall": rank_data["overall_relevance_score"],
-                "reasons": rank_data["reasons"]
-            },
-            evidence=evidence
-        )
+        if not new_raw_results:
+            continue
+            
+        # Enrich the newly found raw results
+        logger.info(f"[DISCOVERY] Enriching {len(new_raw_results)} new candidates from batch...")
+        batch_enriched = enrichment.enrich_candidates(new_raw_results)
+        all_enriched.extend(batch_enriched)
         
-        final_results.append(result)
+        # Deduplicate all accumulated enriched results so far
+        dedup_results = deduplication.resolve_identities(all_enriched)
+        educators_list = dedup_results.get("educators", [])
+        social_profiles_list = dedup_results.get("social_profiles", [])
         
-    # Sort by overall score descending
-    final_results.sort(key=lambda x: x.scores.get("overall", 0), reverse=True)
-    
-    now_iso = datetime.now(timezone.utc).isoformat()
-    cache_service.set(cache_key, [r.dict() for r in final_results])
+        # Verify and rank
+        current_final_results = []
+        for ed in educators_list:
+            ed_profiles = [p for p in social_profiles_list if p["educator_id"] == ed["educator_id"]]
+            
+            verification = validator.verify_educator(
+                educator=ed,
+                social_profiles=ed_profiles,
+                target_location=request.location,
+                target_track=request.track,
+                target_subject=request.subject
+            )
+            
+            # We count candidates that have some relevance to the track/subject
+            subj_status = verification.get("subject_verification", {}).get("status")
+            track_status = verification.get("track_verification", {}).get("status")
+            
+            # If they are at least discovered for the subject/track, we consider them eligible
+            if subj_status != "not_relevant" or track_status != "not_relevant":
+                rank_data = ranking.rank_educator(ed, ed_profiles, verification)
+                
+                evidence = []
+                for dim, res in verification.items():
+                    for ev in res.get("evidence", []):
+                        evidence.append({
+                            "dimension": dim.replace("_verification", ""),
+                            "platform": ev.get("platform"),
+                            "text": ev.get("text")
+                        })
+                        
+                result = SearchResult(
+                    educator_id=ed["educator_id"],
+                    name=ed["name"],
+                    location=verification.get("location_verification", {}).get("value") or "Unknown",
+                    track=verification.get("track_verification", {}).get("value") or "Unknown",
+                    subjects=[verification.get("subject_verification", {}).get("value")] if verification.get("subject_verification", {}).get("value") else [],
+                    profiles=[p.get("raw_profile_data", {}).get("platform_profiles", [{}])[0] for p in ed_profiles if p.get("raw_profile_data")],
+                    scores={
+                        "components": rank_data["scores"],
+                        "overall": rank_data["overall_relevance_score"],
+                        "reasons": rank_data["reasons"]
+                    },
+                    evidence=evidence
+                )
+                current_final_results.append(result)
+                
+        # Sort current results by score
+        current_final_results.sort(key=lambda x: x.scores.get("overall", 0), reverse=True)
+        final_results = current_final_results
+        
+        if len(final_results) >= target_count:
+            logger.info(f"[DISCOVERY] Target of {target_count} reached ({len(final_results)} found). Stopping.")
+            target_reached = True
+            break
 
+    logger.info(f"[DISCOVERY] Final candidates: {len(final_results)}. Unique sources queried: {len(seen_urls)}")
+    
+    # Store with target_reached in cache to retrieve later
+    now_iso = datetime.now(timezone.utc).isoformat()
+    cache_data = {
+        "timestamp": now_iso,
+        "target_reached": target_reached,
+        "results": [r.model_dump() for r in final_results]
+    }
+    
+    if not final_results:
+        # Cache briefly on empty
+        cache_service.set(cache_key, cache_data, 300)
+    else:
+        cache_service.set(cache_key, cache_data)
+        
     return SearchResponse(
         query={
             "location": request.location,
@@ -153,6 +213,7 @@ async def search_educators(request: SearchRequest):
             "subject": request.subject
         },
         total_results=len(final_results),
+        target_reached=target_reached,
         last_updated=now_iso,
         results=final_results
     )

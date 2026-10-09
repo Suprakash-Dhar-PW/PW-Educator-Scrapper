@@ -20,5 +20,6 @@ class SearchResult(BaseModel):
 class SearchResponse(BaseModel):
     query: Dict[str, str]
     total_results: int
+    target_reached: bool = False
     last_updated: str
     results: List[SearchResult]

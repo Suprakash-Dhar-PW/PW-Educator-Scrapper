@@ -31,13 +31,18 @@ class CacheService:
         if not entry:
             return None
             
+        now = datetime.now(timezone.utc)
+        
+        if "expiry_override" in entry:
+            if now.timestamp() > entry["expiry_override"]:
+                return None
+                
         timestamp_str = entry.get("timestamp")
         if not timestamp_str:
             return None
             
         try:
             cached_time = datetime.fromisoformat(timestamp_str)
-            now = datetime.now(timezone.utc)
             delta = (now - cached_time).total_seconds()
             
             if delta <= ttl_seconds:
@@ -47,12 +52,20 @@ class CacheService:
             
         return None
 
-    def set(self, key: str, results: list):
+    def set(self, key: str, value: Any, ttl: Optional[int] = None):
         cache_data = self._load_cache()
         
-        cache_data[key] = {
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            "results": results
-        }
+        if isinstance(value, list):
+            entry = {
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "results": value
+            }
+        else:
+            entry = value
+            
+        if ttl is not None:
+            entry["expiry_override"] = datetime.now(timezone.utc).timestamp() + ttl
+            
+        cache_data[key] = entry
         
         self._save_cache(cache_data)
