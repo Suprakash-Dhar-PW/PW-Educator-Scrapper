@@ -69,3 +69,7 @@ class CacheService:
         cache_data[key] = entry
         
         self._save_cache(cache_data)
+
+    def clear(self):
+        self._save_cache({})
+

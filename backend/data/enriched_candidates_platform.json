@@ -2,13 +2,13 @@
     {
         "candidate_id": "1111-2222-3333-4444",
         "name": "Alakh Pandey",
-        "requested_location": "Lucknow, Uttar Pradesh",
-        "requested_track": "IIT-JEE",
-        "requested_subject": "Physics",
+        "requested_location": null,
+        "requested_track": null,
+        "requested_subject": null,
         "discovery": {
             "source": "anakin_search",
-            "title": "Alakh Pandey - Physics Wallah | LinkedIn",
-            "snippet": "Prominent educator...",
+            "title": "Alakh Pandey",
+            "snippet": null,
             "url": "https://www.linkedin.com/in/alakh-pandey"
         },
         "platform_profiles": [
@@ -26,13 +26,13 @@
     {
         "candidate_id": "5555-6666-7777-8888",
         "name": "Physics Wallah",
-        "requested_location": "Lucknow, Uttar Pradesh",
-        "requested_track": "IIT-JEE",
-        "requested_subject": "Physics",
+        "requested_location": null,
+        "requested_track": null,
+        "requested_subject": null,
         "discovery": {
             "source": "anakin_search",
-            "title": "Physics Wallah Official",
-            "snippet": "Instagram official profile",
+            "title": "Physics Wallah",
+            "snippet": null,
             "url": "https://www.instagram.com/physicswallah/"
         },
         "platform_profiles": [
@@ -49,13 +49,13 @@
     {
         "candidate_id": "9999-0000-aaaa-bbbb",
         "name": "Rajwant Singh",
-        "requested_location": "Lucknow, Uttar Pradesh",
-        "requested_track": "IIT-JEE",
-        "requested_subject": "Physics",
+        "requested_location": null,
+        "requested_track": null,
+        "requested_subject": null,
         "discovery": {
             "source": "anakin_search",
-            "title": "Rajwant Singh Physics",
-            "snippet": "YouTube official profile",
+            "title": "Rajwant Singh",
+            "snippet": null,
             "url": "https://www.youtube.com/rajwant-physics"
         },
         "platform_profiles": [

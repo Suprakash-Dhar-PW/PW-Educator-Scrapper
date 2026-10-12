@@ -78,7 +78,7 @@ class DeduplicationService:
         max_score = 0.0
         
         new_platform_data = new_profile.get("platform_profiles", [{}])[0]
-        new_name = (new_profile.get("name") or "").lower().strip()
+        new_name = (new_profile.get("name") or "").lower().strip().replace(".", "").replace(",", "").replace("-", " ")
         new_username = self._get_username(new_platform_data).lower()
         new_bio = self._get_bio(new_platform_data).lower()
         new_website = self._get_website(new_platform_data).lower()
@@ -87,7 +87,7 @@ class DeduplicationService:
             score = 0.0
             ex_data = existing_p.get("raw_profile_data", {}).get("platform_profiles", [{}])[0]
             
-            ex_name = (existing_p.get("raw_profile_data", {}).get("name") or "").lower().strip()
+            ex_name = (existing_p.get("raw_profile_data", {}).get("name") or "").lower().strip().replace(".", "").replace(",", "").replace("-", " ")
             ex_username = self._get_username(ex_data).lower()
             ex_bio = self._get_bio(ex_data).lower()
             ex_website = self._get_website(ex_data).lower()
@@ -120,8 +120,11 @@ class DeduplicationService:
                 score += 0.6
                 
             # 5. Name Similarity
-            if new_name and ex_name and new_name == ex_name:
-                score += 0.35 # Not enough to merge alone (0.35 < 0.65 threshold)
+            if new_name and ex_name:
+                if new_name == ex_name:
+                    score += 0.7 # High enough to merge alone (0.7 >= 0.65 threshold)
+                elif new_name in ex_name or ex_name in new_name:
+                    score += 0.4
             
             # 6. Institution/Employer Reference
             # Simple heuristic: check common coaching institutes if both bios mention it

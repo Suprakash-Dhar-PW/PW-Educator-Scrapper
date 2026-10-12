@@ -1,149 +1,199 @@
+import logging
 from typing import List, Dict, Any
+from datetime import datetime, timezone
 
 class RankingService:
     def __init__(self):
-        # Weights for the overall score
+        self.score_version = "v1"
         self.weights = {
-            "track_relevance": 0.20,
-            "subject_relevance": 0.20,
-            "location_relevance": 0.10,
-            "teaching_evidence": 0.15,
-            "professional_evidence": 0.05,
-            "cross_platform_presence": 0.10,
-            "audience_signal": 0.05,
-            "profile_completeness": 0.05,
-            "evidence_quality": 0.10
+            "subject_match": 25,
+            "exam_track_match": 20,
+            "teaching_expertise": 15,
+            "professional_identity": 15,
+            "teaching_activity": 10,
+            "location_match": 10,
+            "source_quality": 5
         }
+        self.logger = logging.getLogger("ranking")
 
     def rank_educator(self, educator: Dict[str, Any], social_profiles: List[Dict[str, Any]], verification_results: Dict[str, Any]) -> Dict[str, Any]:
-        
-        scores = {}
-        
-        # 1-3. Relevance from verification layer
-        scores["track_relevance"] = min(100, verification_results.get("track_verification", {}).get("confidence", 0) * 100)
-        scores["subject_relevance"] = min(100, verification_results.get("subject_verification", {}).get("confidence", 0) * 100)
-        scores["location_relevance"] = min(100, verification_results.get("location_verification", {}).get("confidence", 0) * 100)
-        
-        # Aggregate text and metrics
+        factors = []
+        total_score = 0.0
+
+        # 1. Subject match (25)
+        subj_ver = verification_results.get("subject_verification", {})
+        subj_conf = subj_ver.get("confidence", 0)
+        subj_score = round(subj_conf * self.weights["subject_match"], 1)
+        subj_status = "strong" if subj_conf >= 0.8 else "partial" if subj_conf > 0 else "unknown"
+        factors.append({
+            "key": "subject_match",
+            "label": "Subject match",
+            "earned_points": subj_score,
+            "max_points": self.weights["subject_match"],
+            "status": subj_status,
+            "explanation": "Strong evidence of requested subject match found." if subj_status == "strong" else "Partial evidence of subject match." if subj_status == "partial" else "No strong evidence found for subject.",
+            "evidence_ids": [ev.get("platform") for ev in subj_ver.get("evidence", [])]
+        })
+        total_score += subj_score
+
+        # 2. Exam-track match (20)
+        track_ver = verification_results.get("track_verification", {})
+        track_conf = track_ver.get("confidence", 0)
+        track_score = round(track_conf * self.weights["exam_track_match"], 1)
+        track_status = "strong" if track_conf >= 0.8 else "partial" if track_conf > 0 else "unknown"
+        factors.append({
+            "key": "exam_track_match",
+            "label": "Exam-track match",
+            "earned_points": track_score,
+            "max_points": self.weights["exam_track_match"],
+            "status": track_status,
+            "explanation": "Relevant exam-specific teaching evidence was found." if track_status == "strong" else "Partial evidence of exam-track match." if track_status == "partial" else "No strong evidence for exam-track.",
+            "evidence_ids": [ev.get("platform") for ev in track_ver.get("evidence", [])]
+        })
+        total_score += track_score
+
+        # Gather texts
         all_text = ""
         total_followers = 0
-        populated_fields = 0
-        total_fields_expected = len(social_profiles) * 4 # roughly expect name, bio, url, followers
-        platforms_present = set()
+        platforms = set()
         has_linkedin = False
         
         for profile in social_profiles:
-            platform = profile.get("platform", "")
-            platforms_present.add(platform)
-            if platform == "LinkedIn":
-                has_linkedin = True
-                
+            plat = profile.get("platform", "")
+            if plat: platforms.add(plat)
+            if plat == "LinkedIn": has_linkedin = True
+            
             raw_data = profile.get("raw_profile_data", {})
             platform_data = raw_data.get("platform_profiles", [{}])[0]
             
-            # Aggregate text
             texts = [
                 platform_data.get("bio", ""),
                 platform_data.get("description", ""),
                 platform_data.get("about", "")
             ]
-            all_text += " " + " ".join(t for t in texts if t)
             
-            # Sum followers
+            experience_list = platform_data.get("experience", [])
+            has_experience_roles = False
+            if isinstance(experience_list, list):
+                for exp in experience_list:
+                    if isinstance(exp, dict):
+                        texts.append(exp.get("title", ""))
+                        texts.append(exp.get("employer", ""))
+                        has_experience_roles = True
+            
+            all_text += " " + " ".join(t for t in texts if t and isinstance(t, str))
+            
             f = platform_data.get("followers") or platform_data.get("subscribers") or platform_data.get("connections")
             if f and isinstance(f, int):
                 total_followers += f
-                
-            # Count completeness
-            if platform_data.get("name") or platform_data.get("channel_name"): populated_fields += 1
-            if platform_data.get("bio") or platform_data.get("description") or platform_data.get("about"): populated_fields += 1
-            if platform_data.get("url"): populated_fields += 1
-            if f: populated_fields += 1
-                
+
         all_text_lower = all_text.lower()
+
+        # 3. Teaching expertise (15)
+        teach_keywords = ["faculty", "teacher", "educator", "professor", "teaches", "classes", "mentor", "tutor", "coaching", "students", "experience", "years", "instructor", "lecturer"]
+        teach_matches = sum(1 for kw in teach_keywords if kw in all_text_lower)
+        teach_conf = min(1.0, teach_matches / 4.0)
         
-        # 4. Teaching/educator evidence
-        # Points for specific teaching keywords
-        teaching_score = 0
-        keywords = ["faculty", "teacher", "educator", "professor", "teaches", "classes", "mentor", "tutor", "coaching", "students"]
-        for kw in keywords:
-            if kw in all_text_lower:
-                teaching_score += 20
-        scores["teaching_evidence"] = min(100, teaching_score)
-        
-        # 5. Professional experience evidence
-        prof_score = 0
-        if has_linkedin:
-            prof_score += 40
-        if "experience" in all_text_lower or "years" in all_text_lower:
-            prof_score += 30
-        if len(all_text_lower) > 150: # Detailed bio
-            prof_score += 30
-        scores["professional_evidence"] = min(100, prof_score)
-        
-        # 6. Cross-platform presence
-        # 1 platform = 33, 2 = 66, 3+ = 100
-        platforms_count = len(platforms_present)
-        scores["cross_platform_presence"] = min(100, platforms_count * 33.4)
-        
-        # 7. Audience metrics
-        if total_followers > 10000:
-            aud_score = 100
-        elif total_followers > 1000:
-            aud_score = 75
-        elif total_followers > 100:
-            aud_score = 50
-        elif total_followers > 0:
-            aud_score = 25
-        else:
-            aud_score = 0
-        scores["audience_signal"] = aud_score
-        
-        # 8. Profile completeness
-        completeness_ratio = (populated_fields / total_fields_expected) if total_fields_expected > 0 else 0
-        scores["profile_completeness"] = min(100, completeness_ratio * 100)
-        
-        # 9. Evidence quality
-        # Based on how many distinct platforms provided evidence for the dimensions
-        evidence_platforms = set()
-        for dim in ["location_verification", "track_verification", "subject_verification"]:
-            ev_list = verification_results.get(dim, {}).get("evidence", [])
-            for ev in ev_list:
-                evidence_platforms.add(ev.get("platform"))
-                
-        ev_count = len(evidence_platforms)
-        if ev_count >= 3:
-            ev_score = 100
-        elif ev_count == 2:
-            ev_score = 70
-        elif ev_count == 1:
-            ev_score = 40
-        else:
-            ev_score = 0
-        scores["evidence_quality"] = ev_score
-        
-        # Calculate overall score
-        overall_score = sum(scores[key] * self.weights[key] for key in self.weights)
-        
-        # Generate reasons for UI
-        reasons = []
-        if scores["subject_relevance"] >= 80 and scores["track_relevance"] >= 80:
-            reasons.append(f"Highly verified {verification_results.get('track_verification', {}).get('value')} {verification_results.get('subject_verification', {}).get('value')} educator.")
-        if scores["teaching_evidence"] >= 60:
-            reasons.append("Strong evidence of teaching experience found in profile bios.")
-        if platforms_count >= 2:
-            reasons.append(f"Established presence across {platforms_count} different platforms.")
-        if total_followers > 1000:
-            reasons.append(f"Strong audience signal with {total_followers}+ followers.")
-        if scores["location_relevance"] >= 50:
-            reasons.append(f"Location confirmed near {verification_results.get('location_verification', {}).get('value')}.")
+        if has_experience_roles:
+            teach_conf = min(1.0, teach_conf + 0.5)
             
-        import logging
-        logger = logging.getLogger("ranking")
-        logger.info(f"[RANKING] Scored educator: {round(overall_score, 1)} (Platforms: {platforms_count}, Followers: {total_followers})")
-        
-        return {
-            "scores": {k: round(v, 1) for k, v in scores.items()},
-            "overall_relevance_score": round(overall_score, 1),
-            "reasons": reasons
+        if teach_conf == 0 and len(all_text) > 100:
+            teach_conf = 0.2
+        teach_score = round(teach_conf * self.weights["teaching_expertise"], 1)
+        teach_status = "strong" if teach_conf >= 0.8 else "partial" if teach_conf > 0 else "unknown"
+        factors.append({
+            "key": "teaching_expertise",
+            "label": "Teaching expertise and experience",
+            "earned_points": teach_score,
+            "max_points": self.weights["teaching_expertise"],
+            "status": teach_status,
+            "explanation": "Strong evidence of teaching expertise and roles." if teach_status == "strong" else "Partial evidence of teaching expertise." if teach_status == "partial" else "Insufficient evidence of teaching roles.",
+            "evidence_ids": list(platforms) if teach_score > 0 else []
+        })
+        total_score += teach_score
+
+        # 4. Professional identity (15)
+        ident_ver = verification_results.get("identity_verification", {})
+        ident_conf = ident_ver.get("confidence", 0)
+        ident_score = round(ident_conf * self.weights["professional_identity"], 1)
+        ident_status = "strong" if ident_conf >= 0.8 else "partial" if ident_conf > 0 else "unknown"
+        factors.append({
+            "key": "professional_identity",
+            "label": "Professional identity and role evidence",
+            "earned_points": ident_score,
+            "max_points": self.weights["professional_identity"],
+            "status": ident_status,
+            "explanation": "Clear connection to professional profile and role." if ident_status == "strong" else "Partial identity evidence." if ident_status == "partial" else "Unverified identity.",
+            "evidence_ids": [ev.get("platform") for ev in ident_ver.get("evidence", [])]
+        })
+        total_score += ident_score
+
+        # 5. Teaching activity (10)
+        act_conf = 0.0
+        if total_followers > 1000:
+            act_conf = 1.0
+        elif total_followers > 100:
+            act_conf = 0.7
+        elif platforms:
+            act_conf = 0.4
+            
+        act_score = round(act_conf * self.weights["teaching_activity"], 1)
+        act_status = "strong" if act_conf >= 0.8 else "partial" if act_conf > 0 else "unknown"
+        factors.append({
+            "key": "teaching_activity",
+            "label": "Teaching activity and recency",
+            "earned_points": act_score,
+            "max_points": self.weights["teaching_activity"],
+            "status": act_status,
+            "explanation": "Recent or substantial public teaching activity found." if act_status == "strong" else "Some public activity found." if act_status == "partial" else "Limited evidence of recent activity.",
+            "evidence_ids": list(platforms) if act_score > 0 else []
+        })
+        total_score += act_score
+
+        # 6. Location match (10)
+        loc_ver = verification_results.get("location_verification", {})
+        loc_conf = loc_ver.get("confidence", 0)
+        loc_score = round(loc_conf * self.weights["location_match"], 1)
+        loc_status = "strong" if loc_conf >= 0.8 else "partial" if loc_conf > 0 else "unknown"
+        factors.append({
+            "key": "location_match",
+            "label": "Location or mode match",
+            "earned_points": loc_score,
+            "max_points": self.weights["location_match"],
+            "status": loc_status,
+            "explanation": "Location matched requested area." if loc_status == "strong" else "Location partially matched." if loc_status == "partial" else "Location unknown or non-matching.",
+            "evidence_ids": [ev.get("platform") for ev in loc_ver.get("evidence", [])]
+        })
+        total_score += loc_score
+
+        # 7. Source quality (5)
+        sq_conf = min(1.0, len(platforms) / 2.0)
+        if has_linkedin: sq_conf = min(1.0, sq_conf + 0.3)
+        sq_score = round(sq_conf * self.weights["source_quality"], 1)
+        sq_status = "strong" if sq_conf >= 0.8 else "partial" if sq_conf > 0 else "unknown"
+        factors.append({
+            "key": "source_quality",
+            "label": "Source quality and corroboration",
+            "earned_points": sq_score,
+            "max_points": self.weights["source_quality"],
+            "status": sq_status,
+            "explanation": "Multiple high-quality sources corroborate details." if sq_status == "strong" else "Single or average-quality source found." if sq_status == "partial" else "Low source quality.",
+            "evidence_ids": list(platforms)
+        })
+        total_score += sq_score
+
+        # Calculate evidence coverage
+        evidence_factors = sum(1 for f in factors if f["status"] != "unknown")
+        coverage_percent = round((evidence_factors / len(factors)) * 100, 1)
+
+        result = {
+            "relevance_score": round(total_score, 1),
+            "score_version": self.score_version,
+            "score_explanation": {
+                "factors": factors,
+                "evidence_coverage_percent": coverage_percent,
+                "evaluated_at": datetime.now(timezone.utc).isoformat()
+            }
         }
+        self.logger.info(f"[RANKING] Scored educator: {total_score}/100 (Coverage: {coverage_percent}%)")
+        return result

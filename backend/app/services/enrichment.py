@@ -9,31 +9,46 @@ class EnrichmentService:
     def __init__(self):
         self.scraper = AnakinScraperService()
         
-    def enrich_candidates(self, normalized_candidates: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def enrich_candidates_batch(self, deduplicated_candidates: List[Dict[str, Any]]) -> Dict[str, Any]:
         enriched_candidates = []
-        seen_urls = set()
+        urls_to_scrape = []
+        url_to_candidate = {}
         
-        logger.info(f"[SEARCH] Processing {len(normalized_candidates)} normalized candidates.")
+        for cand in deduplicated_candidates:
+            url = cand.get("profile_url")
+            if url:
+                if url not in url_to_candidate:
+                    urls_to_scrape.append(url)
+                    url_to_candidate[url] = cand
+                    
+        logger.info(f"[SEARCH] Batch enriching {len(urls_to_scrape)} unique candidates.")
         
-        import concurrent.futures
-        
-        def process_candidate(candidate):
-            url = candidate.get("profile_url")
-            
-            if not url or url in seen_urls:
-                logger.info(f"[DEDUPLICATED] Skipping duplicate or invalid URL: {url}")
-                return None
-            
-            seen_urls.add(url)
-            logger.info(f"[PROFILE SCRAPE START] Enqueueing scrape for URL: {url}")
-            
-            scrape_result = self.scraper.scrape_profile(url)
+        scrape_results = {"results": {}, "credits_used": 0.0, "credits_estimated": 0.0}
+        if urls_to_scrape:
+            # Check if scraper has batch support added
+            if hasattr(self.scraper, "scrape_profiles_batch"):
+                scrape_results = self.scraper.scrape_profiles_batch(urls_to_scrape)
+            else:
+                # Fallback to single scrapes (should not happen based on patch)
+                import concurrent.futures
+                results = {}
+                def scrape_single(u):
+                    return u, self.scraper.scrape_profile(u)
+                with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+                    for u, res in executor.map(scrape_single, urls_to_scrape):
+                        results[u] = res
+                scrape_results = {"results": results, "credits_used": 0.0, "credits_estimated": len(urls_to_scrape) * 5.0}
+
+        for url, scrape_result in scrape_results.get("results", {}).items():
+            candidate = url_to_candidate[url]
             status = scrape_result.get("scrape_status", "failed")
             
             if status == "success":
-                logger.info(f"[PROFILE SCRAPE SUCCESS] Completed scrape for URL: {url}")
+                logger.info(f"[PROFILE SCRAPE SUCCESS] URL: {url}")
+            elif "402" in status:
+                logger.warning(f"[PROFILE SCRAPE FAILED 402] Out of credits: {url}")
             else:
-                logger.info(f"[PROFILE SCRAPE FAILED] Failed scrape for URL: {url} | Status: {status}")
+                logger.info(f"[PROFILE SCRAPE FAILED] URL: {url} | Status: {status}")
                 
             enriched_candidate = {
                 "candidate_id": candidate.get("candidate_id"),
@@ -53,12 +68,10 @@ class EnrichmentService:
                     scrape_result
                 ]
             }
-            return enriched_candidate
-
-        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-            results = executor.map(process_candidate, normalized_candidates)
-            for res in results:
-                if res:
-                    enriched_candidates.append(res)
-                    
-        return enriched_candidates
+            enriched_candidates.append(enriched_candidate)
+            
+        return {
+            "enriched_candidates": enriched_candidates,
+            "credits_used": scrape_results.get("credits_used", 0.0),
+            "credits_estimated": scrape_results.get("credits_estimated", 0.0)
+        }

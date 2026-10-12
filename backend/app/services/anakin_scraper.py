@@ -79,6 +79,14 @@ class AnakinScraperService:
                         "platform": "Platform name (e.g. Instagram, YouTube, LinkedIn, Reddit, Facebook)",
                         "url": "URL of the social profile"
                     }
+                ],
+                "experience": [
+                    {
+                        "title": "Job title or role",
+                        "employer": "Name of the employer or company",
+                        "start_date": "Start date (e.g. July 2026 or October 2022)",
+                        "end_date": "End date (e.g. Present or April 2024)"
+                    }
                 ]
             }
         }
@@ -144,7 +152,8 @@ class AnakinScraperService:
                 "website": content.get("website"),
                 "location": content.get("location"),
                 "headline": content.get("headline"),
-                "description": content.get("description")
+                "description": content.get("description"),
+                "experience": content.get("experience", [])
             }
             
             # Extract social profiles
@@ -164,3 +173,102 @@ class AnakinScraperService:
         except Exception as e:
             logger.error(f"Error extracting data from raw result for {url}: {e}")
             return self._create_fallback_response(url, platform, status="malformed_response")
+
+    def scrape_profiles_batch(self, urls: list) -> dict:
+        if not self.api_key:
+            return {"results": {url: self._create_fallback_response(url, self.detect_platform(url), "failed") for url in urls}, "credits_used": 0.0, "credits_estimated": 0.0}
+
+        results = {}
+        total_credits_used = 0.0
+        total_credits_estimated = 0.0
+        import requests, time
+        
+        # Batch max 10
+        for i in range(0, len(urls), 10):
+            batch_urls = urls[i:i+10]
+            
+            payload = {
+                "urls": batch_urls,
+                "extraction_schema": {
+                    "name": "Full name of the person, if available",
+                    "username": "Username on the platform",
+                    "bio": "Biography or about section",
+                    "followers": "Number of followers",
+                    "subscribers": "Number of subscribers",
+                    "location": "Geographical location",
+                    "headline": "Professional headline",
+                    "social_profiles": [{"platform": "Platform", "url": "URL"}],
+                    "experience": [{"title": "Title", "employer": "Employer"}]
+                }
+            }
+            
+            total_credits_estimated += 5.0 * len(batch_urls) # Documented cost: ~5 per URL
+            
+            try:
+                response = requests.post("https://api.anakin.io/v1/url-scraper/batch", headers=self.get_headers(), json=payload, timeout=15)
+                if response.status_code == 402:
+                    import logging
+                    logging.getLogger("anakin_scraper").error(f"[SCRAPE HTTP ERROR] 402 Payment Required for batch. Halting Anakin usage.")
+                    self.api_key = None # Stop further requests for this instance
+                    for url in batch_urls:
+                        results[url] = self._create_fallback_response(url, self.detect_platform(url), "failed_402")
+                    continue
+                    
+                response.raise_for_status()
+                job_data = response.json()
+                job_id = job_data.get("id") or job_data.get("job_id")
+                
+                if "credit_cost" in job_data:
+                    total_credits_used += float(job_data["credit_cost"])
+                    
+                if not job_id:
+                    for url in batch_urls:
+                        results[url] = self._create_fallback_response(url, self.detect_platform(url), "failed")
+                    continue
+                    
+                poll_endpoint = f"https://api.anakin.io/v1/url-scraper/batch/{job_id}"
+                job_completed = False
+                for attempt in range(12):
+                    time.sleep(5)
+                    poll_response = requests.get(poll_endpoint, headers=self.get_headers(), timeout=15)
+                    if poll_response.status_code == 402:
+                        self.api_key = None
+                        break
+                        
+                    poll_response.raise_for_status()
+                    status_data = poll_response.json()
+                    
+                    if "credit_cost" in status_data:
+                        total_credits_used += float(status_data["credit_cost"]) - (float(job_data["credit_cost"]) if "credit_cost" in job_data else 0.0)
+                        
+                    status = status_data.get("status", "").lower()
+                    if status in ["completed", "success"]:
+                        batch_results = status_data.get("results", [])
+                        for res in batch_results:
+                            url = res.get("url")
+                            if url:
+                                results[url] = self._extract_structured_info(res, url, self.detect_platform(url))
+                        job_completed = True
+                        break
+                    elif status in ["failed", "error"]:
+                        break
+                
+                if not job_completed:
+                    for url in batch_urls:
+                        if url not in results:
+                            results[url] = self._create_fallback_response(url, self.detect_platform(url), "failed")
+                            
+            except requests.exceptions.HTTPError as e:
+                if e.response and e.response.status_code == 402:
+                    self.api_key = None
+                for url in batch_urls:
+                    results[url] = self._create_fallback_response(url, self.detect_platform(url), "failed")
+            except Exception as e:
+                for url in batch_urls:
+                    results[url] = self._create_fallback_response(url, self.detect_platform(url), "failed")
+                    
+        return {
+            "results": results,
+            "credits_used": total_credits_used,
+            "credits_estimated": total_credits_estimated
+        }

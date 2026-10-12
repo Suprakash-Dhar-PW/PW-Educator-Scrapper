@@ -1,10 +1,8 @@
 {
-    "name": null,
-    "username": null,
-    "bio": null,
-    "followers": null,
-    "following": null,
-    "website": null,
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/physicswallah/",
     "scrape_status": "failed",
-    "source_url": "https://www.instagram.com/physicswallah/"
+    "username": null,
+    "followers": null,
+    "bio": null
 }

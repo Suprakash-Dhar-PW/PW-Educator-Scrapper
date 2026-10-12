@@ -1,8 +1,23 @@
 {
+    "identity_verification": {
+        "value": "Amit Dixit",
+        "entity_type": "individual",
+        "headline": "",
+        "employer": "",
+        "confidence": 0.5,
+        "status": "verified",
+        "evidence": []
+    },
+    "employment_verification": {
+        "value": "ELIGIBLE",
+        "confidence": 0.8,
+        "status": "verified",
+        "evidence": []
+    },
     "location_verification": {
         "value": "Lucknow",
         "confidence": 0.4,
-        "status": "uncertain",
+        "status": "partially_verified",
         "evidence": [
             {
                 "platform": "LinkedIn",

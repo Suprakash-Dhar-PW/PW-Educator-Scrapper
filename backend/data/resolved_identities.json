@@ -1,31 +1,26 @@
 {
     "educators": [
         {
-            "educator_id": "ed47a86e-4f4a-42e6-b334-6a4ca021edfc",
-            "name": "Amit Dixit",
-            "match_confidence": 1.0
-        },
-        {
-            "educator_id": "bd122c63-8201-4b99-871d-f496e5c8153d",
+            "educator_id": "40126357-2eaf-4111-a9f6-fcd849a25e4a",
             "name": "Amit Dixit",
             "match_confidence": 1.0
         }
     ],
     "social_profiles": [
         {
-            "educator_id": "ed47a86e-4f4a-42e6-b334-6a4ca021edfc",
+            "educator_id": "40126357-2eaf-4111-a9f6-fcd849a25e4a",
             "candidate_id": "cand-1",
             "platform": "Instagram",
             "url": "https://instagram.com/amit_physics"
         },
         {
-            "educator_id": "ed47a86e-4f4a-42e6-b334-6a4ca021edfc",
+            "educator_id": "40126357-2eaf-4111-a9f6-fcd849a25e4a",
             "candidate_id": "cand-2",
             "platform": "YouTube",
             "url": "https://youtube.com/amit_physics_yt"
         },
         {
-            "educator_id": "bd122c63-8201-4b99-871d-f496e5c8153d",
+            "educator_id": "40126357-2eaf-4111-a9f6-fcd849a25e4a",
             "candidate_id": "cand-3",
             "platform": "LinkedIn",
             "url": "https://linkedin.com/in/amit-dixit-123"
